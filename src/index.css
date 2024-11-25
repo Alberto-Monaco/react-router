@@ -6,3 +6,19 @@
     scale: 1.01;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
 }
+
+nav {
+    padding-bottom: 1rem;
+
+    a {
+        padding-right: 2rem;
+
+        color: black;
+        text-decoration: none;
+    }
+
+    &.active {
+        color: #007bff;
+        text-decoration: underline;
+    }
+}

@@ -3,11 +3,10 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AppHeader from './components/AppHeader'
-import AppMain from './components/AppMain'
+
 import HomePage from './pages/HomePage'
 import About from './pages/About'
 import PostsList from './pages/PostsList'
-import Navbar from './pages/Navbar'
 
 const initialFormData = {
 	title: '',
@@ -79,9 +78,9 @@ function App() {
 		<>
 			<BrowserRouter>
 				<AppHeader />
-				<Navbar />
+
 				<Routes>
-					<Route path='/' element={<HomePage />} />
+					<Route index element={<HomePage />} />
 					<Route path='/about' element={<About />} />
 					<Route
 						path='/posts'
