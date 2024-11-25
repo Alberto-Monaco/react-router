@@ -17,19 +17,27 @@ nav {
     padding-bottom: 1rem;
 
     a {
-        padding-right: 2rem;
-
-        color: black;
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+        color: white;
         text-decoration: none;
+        border: 2px solid #4e0486;
+        border-radius: 5px;
+        margin-right: 1rem;
+        transition: all 0.3s ease;
+        background-color: #007bff;
+    }
 
-
-
+    a:hover {
+        background-color: rgb(39, 86, 255);
+        color: white;
     }
 }
 
 nav a.active {
-    color: #007bff;
-    text-decoration: underline;
+    color: white;
+    background-color: rgb(114, 0, 134);
+
 }
 
 body {
