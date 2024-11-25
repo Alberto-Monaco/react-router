@@ -1,9 +1,14 @@
 //si fa riferimento come api al progetto express-blog-api-crud
 
 import { useState, useEffect } from 'react'
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AppHeader from './components/AppHeader'
 import AppMain from './components/AppMain'
+import HomePage from './pages/HomePage'
+import About from './pages/About'
+import PostsList from './pages/PostsList'
+import Navbar from './pages/Navbar'
+
 const initialFormData = {
 	title: '',
 	image: '1.jpg',
@@ -72,14 +77,26 @@ function App() {
 
 	return (
 		<>
-			<AppHeader />
-			<AppMain
-				addArticle={addArticle}
-				handleFormField={handleFormField}
-				formData={formData}
-				articles={articles}
-				deleteArticle={deleteArticle}
-			/>
+			<BrowserRouter>
+				<AppHeader />
+				<Navbar />
+				<Routes>
+					<Route path='/' element={<HomePage />} />
+					<Route path='/about' element={<About />} />
+					<Route
+						path='/posts'
+						element={
+							<PostsList
+								addArticle={addArticle}
+								handleFormField={handleFormField}
+								formData={formData}
+								articles={articles}
+								deleteArticle={deleteArticle}
+							/>
+						}
+					/>
+				</Routes>
+			</BrowserRouter>
 		</>
 	)
 }
