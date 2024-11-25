@@ -6,7 +6,7 @@ export default function AppMain({ addArticle, handleFormField, formData, article
 		<>
 			<main>
 				<AppAddArticle addArticle={addArticle} handleFormField={handleFormField} formData={formData} />
-				<section className='container my-3'>
+				<section className='my-3'>
 					<div className='row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4'>
 						{articles.map((article, index) => (
 							<AppCard key={index} article={article} index={index} deleteArticle={deleteArticle} />

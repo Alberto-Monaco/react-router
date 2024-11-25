@@ -3,8 +3,8 @@ import Navbar from './Navbar'
 export default function PostsList({ addArticle, handleFormField, formData, articles, deleteArticle }) {
 	return (
 		<>
+			<Navbar />
 			<div className='container'>
-				<Navbar />
 				<AppMain
 					addArticle={addArticle}
 					handleFormField={handleFormField}
