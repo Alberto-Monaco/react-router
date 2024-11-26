@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function AppCard({ article, index, deleteArticle }) {
 	return (
 		<div className='col'>
@@ -9,7 +11,9 @@ export default function AppCard({ article, index, deleteArticle }) {
 					style={{ backgroundImage: 'cover' }}
 				/>
 				<div className='card-body'>
-					<h5 className='card-title'>{article.title}</h5>
+					<h5 className='card-title'>
+						<Link to={`/posts/${article.slug}`}>{article.title}</Link>
+					</h5>
 					<div className='card-text'>
 						<div>
 							<strong>Content</strong>: {article.content}

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AppHeader from './components/AppHeader'
+import PostDetail from './pages/PostDetail'
 
 import HomePage from './pages/HomePage'
 import About from './pages/About'
@@ -94,6 +95,7 @@ function App() {
 							/>
 						}
 					/>
+					<Route path='/posts/:slug' element={<PostDetail />} />
 				</Routes>
 			</BrowserRouter>
 		</>
