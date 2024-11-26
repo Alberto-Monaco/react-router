@@ -4,12 +4,14 @@ export default function AppCard({ article, index, deleteArticle }) {
 	return (
 		<div className='col'>
 			<div className='card h-100' style={{ position: 'relative' }}>
-				<img
-					src={'http://localhost:3006/imgs/posts/' + article.image}
-					className='card-img-top'
-					alt={article.title}
-					style={{ backgroundImage: 'cover' }}
-				/>
+				<Link to={`/posts/${article.slug}`}>
+					<img
+						src={'http://localhost:3006/imgs/posts/' + article.image}
+						className='card-img-top'
+						alt={article.title}
+						style={{ backgroundImage: 'cover' }}
+					/>
+				</Link>
 				<div className='card-body'>
 					<h5 className='card-title'>
 						<Link to={`/posts/${article.slug}`}>{article.title}</Link>
