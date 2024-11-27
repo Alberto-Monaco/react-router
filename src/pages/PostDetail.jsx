@@ -21,7 +21,7 @@ export default function PostDetail() {
 				<h1>{post?.title}</h1>
 				<img src={`http://localhost:3006/imgs/posts/${post?.image}`} alt={post?.title} width={500} />
 				<div className='mt-4'>{post?.content}</div>
-				<div className='mt-4'>{post?.tags?.join(', ')}</div>
+				<div className='mt-4'>{post?.tags.join(', ')}</div>
 			</div>
 		</>
 	)
